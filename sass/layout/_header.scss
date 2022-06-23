@@ -1,0 +1,12 @@
+// @import '../abstracts/_variables';
+
+header {
+	display: flex;
+}
+
+.svg-box {
+	// position: absolute;
+	width: 78rem;
+	transform: translate(-65rem, -5.5rem);
+	z-index: -100;
+}
