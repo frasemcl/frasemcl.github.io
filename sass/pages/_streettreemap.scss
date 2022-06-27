@@ -1,4 +1,13 @@
-.background {
+.section-shiny {
+	background-color: $color-grey-light-1;
+	height: 100vh;
+
+	// @include respond(tab-port) {
+	// 	padding: 20rem 0;
+	// }
+}
+
+.shiny-intro-modal {
 	display: flex;
 	justify-content: center;
 	align-items: center;

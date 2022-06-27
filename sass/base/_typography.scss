@@ -3,38 +3,23 @@ body {
 	background: $color-primary;
 }
 
-.heading-primary {
+h1 {
 	color: $color-white;
-	margin-bottom: 6rem;
+	text-transform: uppercase;
+	display: block;
+	font-size: 6rem;
+	font-weight: 400;
+	letter-spacing: 1rem;
+	margin: 2rem;
+}
 
-	&--main {
-		text-transform: uppercase;
-		display: block;
-		font-size: 6rem;
-		font-weight: 400;
-		letter-spacing: 1rem;
-		animation-name: moveInLeft;
-		animation-duration: 1.5s;
-		animation-timing-function: ease-out;
-
-		// @include respond(phone) {
-		// 	letter-spacing: 1rem;
-		// 	font-size: 5rem;
-		// }
-
-		/* animation-delay: 3s; */
-		/* animation-iteration-count: 3; */
-	}
-
-	&--sub {
-		display: block;
-		font-size: 2.5rem;
-		font-weight: 700;
-		letter-spacing: 0.1rem;
-		// animation: moveInRight 1.5s ease-out;
-
-		// @include respond(phone) {
-		// 	letter-spacing: 0.5rem;
-		// }
-	}
+h3 {
+	text-transform: uppercase;
+	color: $color-white;
+	display: block;
+	font-size: 2.5rem;
+	font-weight: 700;
+	letter-spacing: 0.1rem;
+	margin: 2rem 6rem;
+	line-height: 4rem;
 }

@@ -16,6 +16,115 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 1em = 16px (em is the way to go for mediaqueries)
 */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  /* This defines what 1rem is*/
+  font-size: 62.5%;
+}
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media only screen and (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+}
+
+::-moz-selection {
+  background-color: #ff6347;
+  color: white;
+}
+
+::selection {
+  background-color: #ff6347;
+  color: white;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ff6347;
+}
+
+h1 {
+  color: white;
+  text-transform: uppercase;
+  display: block;
+  font-size: 6rem;
+  font-weight: 400;
+  letter-spacing: 1rem;
+  margin: 2rem;
+}
+
+h3 {
+  text-transform: uppercase;
+  color: white;
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  margin: 2rem 6rem;
+  line-height: 4rem;
+}
+
+.disp-none {
+  display: none;
+}
+
+.u-center-text {
+  text-align: center !important;
+}
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem !important;
+}
+@media only screen and (max-width: 56.25em) {
+  .u-margin-bottom-big {
+    margin-bottom: 5rem !important;
+  }
+}
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important;
+}
+@media only screen and (max-width: 56.25em) {
+  .u-margin-bottom-medium {
+    margin-bottom: 3rem !important;
+  }
+}
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem !important;
+}
+
+.u-margin-top-big {
+  margin-top: 8rem !important;
+}
+
+.u-margin-top-huge {
+  margin-top: 10rem !important;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -29,61 +138,160 @@ header {
   z-index: -100;
 }
 
-*,
-*:before,
-*:after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+.section-shiny {
+  width: 100vw;
+  height: 100vh;
 }
 
-html {
-  /* This defines what 1rem is*/
-  font-size: 62.5%;
+.shiny-box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.shiny-box__title {
+  position: absolute;
 }
 
-body {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 3rem;
-}
-
-::-moz-selection {
-  background-color: white;
-  color: black;
-}
-
-::selection {
-  background-color: white;
-  color: black;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: white;
-}
-
-.heading-primary {
-  color: black;
-  margin-bottom: 6rem;
-}
-.heading-primary--main {
+.btn, .btn:link, .btn:visited {
   text-transform: uppercase;
-  display: block;
-  font-size: 6rem;
-  font-weight: 400;
-  letter-spacing: 1rem;
-  -webkit-animation-name: moveInLeft;
-          animation-name: moveInLeft;
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
-  /* animation-delay: 3s; */
-  /* animation-iteration-count: 3; */
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 10rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  position: relative;
+  font-size: 1.6rem;
+  margin-top: 3rem;
+  border: none;
+  cursor: pointer;
 }
-.heading-primary--sub {
-  display: block;
-  font-size: 2.5rem;
-  font-weight: 700;
-  letter-spacing: 0.1rem;
+.btn:hover {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+  -webkit-box-shadow: 0 1rem 2rem rgba(255, 255, 255, 0.2);
+          box-shadow: 0 1rem 2rem rgba(255, 255, 255, 0.2);
+}
+.btn:hover::after {
+  -webkit-transform: scaleY(2.4);
+          transform: scaleY(2.4);
+  opacity: 0;
+}
+.btn:active, .btn:focus {
+  outline: none;
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(255, 255, 255, 0.2);
+          box-shadow: 0 0.5rem 1rem rgba(255, 255, 255, 0.2);
+}
+.btn--white {
+  background-color: white;
+  color: black;
+}
+.btn--white::after {
+  background-color: white;
+}
+.btn--green {
+  background-color: #ff6347;
+  color: white;
+}
+.btn--green::after {
+  background-color: #ff6347;
+}
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.btn--animated {
+  -webkit-animation: moveInBottom 0.5s ease-out 0.75s;
+          animation: moveInBottom 0.5s ease-out 0.75s;
+  /* simple solution for starting at keyframe 0 (not visible) */
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
+
+.btn-text:link, .btn-text:visited {
+  font-size: 1.6rem;
+  color: #ff6347;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 10rem;
+  padding: 1rem 2rem;
+  border: 1px solid #ff6347;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.btn-text:hover {
+  background-color: #ff6347;
+  color: white;
+  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+.btn-text:active {
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.background {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  background: url(https://res.cloudinary.com/advgrip/image/upload/v1656326622/000060360005_small_aaehz6.jpg) no-repeat center center fixed;
+  background-size: cover;
+  z-index: 1000;
+}
+
+.section-shiny {
+  background-color: grey;
+  height: 100vh;
+}
+
+.shiny-intro-modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  background: url(https://res.cloudinary.com/advgrip/image/upload/v1656326622/000060360005_small_aaehz6.jpg) no-repeat center center fixed;
+  background-size: cover;
+  z-index: 1000;
 }
