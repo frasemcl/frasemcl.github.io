@@ -50,26 +50,24 @@ body {
           box-sizing: border-box;
   overflow: hidden;
 }
-
-::-moz-selection {
-  background-color: #ff6347;
-  color: white;
-}
-
-::selection {
-  background-color: #ff6347;
-  color: white;
+@media only screen and (max-width: 56.25em) {
+  body {
+    padding: 0;
+  }
 }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: #ff6347;
 }
 
-h1 {
+h1,
+h3 {
   color: white;
   text-transform: uppercase;
   display: block;
+}
+
+h1 {
   font-size: 6rem;
   font-weight: 400;
   letter-spacing: 1rem;
@@ -77,14 +75,18 @@ h1 {
 }
 
 h3 {
-  text-transform: uppercase;
-  color: white;
-  display: block;
   font-size: 2.5rem;
   font-weight: 700;
   letter-spacing: 0.1rem;
   margin: 2rem 6rem;
   line-height: 4rem;
+}
+
+.shiny-info-modal h3 {
+  background-color: rgba(255, 99, 71, 0.6);
+  border-radius: 5px;
+  padding: 1rem;
+  font-size: 2rem;
 }
 
 .disp-none {
@@ -245,6 +247,17 @@ header {
           transform: translateY(0);
 }
 
+.shiny-box__button {
+  position: absolute;
+  bottom: 6rem;
+  right: -2rem;
+  border: solid black 0.1rem;
+}
+
+.btn--shiny--back {
+  margin-bottom: 6rem;
+}
+
 .background {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -294,4 +307,34 @@ header {
   background: url(https://res.cloudinary.com/advgrip/image/upload/v1656326622/000060360005_small_aaehz6.jpg) no-repeat center center fixed;
   background-size: cover;
   z-index: 1000;
+}
+
+.shiny-intro-modal h1 {
+  background-color: rgba(255, 99, 71, 0.5);
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+.shiny-info-modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  background: url(https://res.cloudinary.com/advgrip/image/upload/v1656326622/000060360005_small_aaehz6.jpg) no-repeat center center fixed;
+  background-size: cover;
+  z-index: 500;
+  display: none;
 }

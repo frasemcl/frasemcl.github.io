@@ -25,3 +25,28 @@
 	z-index: 1000;
 	// display: none;
 }
+
+.shiny-intro-modal h1 {
+	background-color: rgba($color-primary, $alpha: 0.5);
+	border-radius: 5px;
+	padding: 1rem;
+}
+
+.shiny-info-modal {
+	display: flex;
+	justify-content: end;
+	align-items: center;
+	flex-direction: column;
+	position: absolute;
+	height: 100vh;
+	width: 100vw;
+	text-align: center;
+	background: url(https://res.cloudinary.com/advgrip/image/upload/v1656326622/000060360005_small_aaehz6.jpg)
+		no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	z-index: 500;
+	display: none;
+}

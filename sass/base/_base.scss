@@ -25,12 +25,12 @@ body {
 	box-sizing: border-box;
 	overflow: hidden;
 
-	// @include respond(tab-port) {
-	// 	padding: 0;
-	// }
+	@include respond(tab-port) {
+		padding: 0;
+	}
 }
 
-::selection {
-	background-color: $color-primary;
-	color: $color-white;
-}
+// ::selection {
+// 	background-color: $color-primary;
+// 	color: $color-white;
+// }
