@@ -24,14 +24,31 @@
 					<iframe
 						class="shiny-box_map"
 						src="https://frasermcl.shinyapps.io/tor-tree-app-v2/"
-						frameborder="0"
+						style="border: 0"
 						width="100%"
 						height="100%"
+						frameborder="0"
+						scrolling="no"
+						allow="geolocation 'self' https://frasemcl.github.io/streettreemap/"
 						;
 					></iframe>
 					<button class="btn shiny-box__button">INFO</button>
 					<div class="shiny-info-modal">
-						<h3 class="heading-primary--sub">
+						<div class="shiny-info-modal__container">
+							<p>
+								Not all the street trees maintained by the city are native or
+								considered naturalized by scientists.
+							</p>
+							<p>
+								Pick your street, or multiple streets in your area, and the
+								species you want to go out and see.
+							</p>
+							<p>
+								You can filter by tree diameter too! Play with the slider and
+								watch the mapped trees change.
+							</p>
+						</div>
+						<!-- <h3 class="heading-primary--sub">
 							Not all the street trees maintained by the city are native or
 							considered naturalized by scientists.
 						</h3>
@@ -42,7 +59,7 @@
 						<h3 class="heading-primary--sub">
 							You can filter by tree diameter too! Play with the slider and
 							watch the mapped trees change.
-						</h3>
+						</h3> -->
 						<button class="btn btn--shiny--back btn--white btn--animated">
 							back to map app
 						</button>

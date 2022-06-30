@@ -49,4 +49,10 @@
 	background-size: cover;
 	z-index: 500;
 	display: none;
+
+	&__container {
+		background-color: rgba($color-primary, $alpha: 0.6);
+		border-radius: 5px;
+		margin: 2rem;
+	}
 }
